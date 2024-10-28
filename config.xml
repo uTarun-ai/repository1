@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context 
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+                           
+                           
+             <!-- first bean -->
+             <!-- value can be injected through tags -->
+                           
+           <bean class="com.springcore.student" name="randomstudent">
+           <property name="name">
+           		<value>tharun</value>
+           </property>
+           
+           <property name="stu_id">
+           		<value>12345</value>
+           		
+           </property>
+           
+           <property name="stu_adress">
+           		<value>hyderabad</value>
+           </property>
+           
+           </bean>
+                 
+              <!-- 2nd bean -->
+              <!-- value as attribute -->
+              
+	       <bean class="com.springcore.student" name="randomstudent1">
+	           
+	           <property name="name" value="kumar"/>
+	             
+	             <property name="stu_id" value="5678"/>
+	             
+	             <property name="stu_adress" value="kachigudaa"/>
+           </bean>
+           
+           <!-- using p schema -->
+           <!-- value as by using p schema -->
+           
+           <bean class="com.springcore.student" name="randomstudent2" p:name="upputuri" p:stu_id="9944" p:stu_adress="lingampalli">
+             </bean>
+</beans>
